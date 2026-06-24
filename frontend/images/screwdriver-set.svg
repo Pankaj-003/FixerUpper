@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-labelledby="t">
+  <title id="t">Screwdriver set</title><rect width="600" height="450" rx="24" fill="#eef1f2"/>
+  <g transform="translate(70 55)"><g fill="#4b5963"><path d="M79 50h18v210H79z"/><path d="M189 29h18v231h-18z"/><path d="M299 60h18v200h-18z"/><path d="M409 37h18v223h-18z"/></g><g fill="#f5a623"><path d="M49 230h78c18 0 33 15 33 33v78H16v-78c0-18 15-33 33-33z"/><path d="M159 230h78c18 0 33 15 33 33v78H126v-78c0-18 15-33 33-33z"/><path d="M269 230h78c18 0 33 15 33 33v78H236v-78c0-18 15-33 33-33z"/><path d="M379 230h78c18 0 33 15 33 33v78H346v-78c0-18 15-33 33-33z"/></g><g fill="#27333c"><path d="M16 282h144v33H16z"/><path d="M126 282h144v33H126z"/><path d="M236 282h144v33H236z"/><path d="M346 282h144v33H346z"/></g><path d="M81 35h14l13 18H68zM192 14h12v28h-12zM301 45h14l-7 22zM410 22h18v17h-18z" fill="#687680"/></g>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-labelledby="t">
+  <title id="t">Claw hammer</title><rect width="600" height="450" rx="24" fill="#eef1f2"/>
+  <g transform="translate(88 52) rotate(-20 220 180)"><path d="M236 125h55v270h-55z" rx="20" fill="#f5a623"/><path d="M241 202h45v183h-45z" fill="#28343d"/><path d="M112 74h247c20 0 36 16 36 36v69H112z" fill="#606d77"/><path d="M359 91c75 9 104 43 124 92-43-28-77-27-124-12z" fill="#46535d"/><path d="M104 84H67c-25 0-45 20-45 45s20 45 45 45h37z" fill="#4a5660"/><path d="M224 371h79v30h-79z" rx="15" fill="#202a31"/></g>
+</svg>
