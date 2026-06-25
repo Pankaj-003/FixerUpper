@@ -132,8 +132,9 @@ try {
         )'
     );
     $stockStatement = $pdo->prepare(
-        'UPDATE products SET stock = stock - :quantity
-         WHERE id = :product_id AND stock >= :quantity'
+        'UPDATE products
+         SET stock = stock - :decrement_quantity
+         WHERE id = :product_id AND stock >= :minimum_stock'
     );
 
     foreach ($orderItems as $orderItem) {
@@ -146,8 +147,9 @@ try {
             ':line_total' => $orderItem['line_total'],
         ]);
         $stockStatement->execute([
-            ':quantity' => $orderItem['quantity'],
+            ':decrement_quantity' => $orderItem['quantity'],
             ':product_id' => $orderItem['product_id'],
+            ':minimum_stock' => $orderItem['quantity'],
         ]);
 
         if ($stockStatement->rowCount() !== 1) {
