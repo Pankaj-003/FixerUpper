@@ -6,7 +6,7 @@
 
 ## Student Details
 
-**Name:** Pankaj Biswas
+**Name:** 
 **Student ID:** [Enter Your Student ID]
 
 ---
