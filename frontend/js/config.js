@@ -12,4 +12,7 @@
           : 'https://fixerupper-1.onrender.com'),
     REQUEST_TIMEOUT_MS: 15000
   });
-}());
+}());  
+
+
+// Done Config
