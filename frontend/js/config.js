@@ -10,7 +10,7 @@
     API_BASE_URL: window.FIXERUPPER_API_URL
       || (isLocal
           ? 'http://localhost:8080'
-          : 'https://fixerupper-1.onrender.com'),
+          : ''),
     REQUEST_TIMEOUT_MS: 15000
   });
 }());

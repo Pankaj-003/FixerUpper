@@ -4,12 +4,10 @@
   async function refreshAuthNavigation() {
     let authenticated = false;
     try {
-      const result = await window.FixerUpper.apiFetch('/api/orders.php?limit=1');
+      const result = await window.FixerUpper.apiFetch('/api/auth-status.php');
       authenticated = result?.data?.authenticated === true;
     } catch (error) {
-      if (error.status !== 401) {
-        console.warn('Authentication status could not be checked.');
-      }
+      console.warn('Authentication status could not be checked.');
     }
 
     document.querySelectorAll('.auth-guest').forEach((element) => {

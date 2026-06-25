@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://fixerupper-api.onrender.com/api/:path*"
+      "destination": "https://fixerupper-1.onrender.com/api/:path*"
     }
   ]
 }

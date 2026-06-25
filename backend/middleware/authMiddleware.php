@@ -12,14 +12,19 @@ function bearerToken(): string
     return '';
 }
 
-function requireAuth(): array
+function currentAuthUser(): ?array
 {
     $token = $_COOKIE['fixerupper_token'] ?? bearerToken();
     if (!is_string($token) || $token === '') {
-        errorResponse('Authentication is required.', 401);
+        return null;
     }
 
-    $claims = verifyJwt($token);
+    try {
+        $claims = verifyJwt($token);
+    } catch (Throwable) {
+        return null;
+    }
+
     $sessionUserId = $_SESSION['user_id'] ?? null;
 
     if (
@@ -27,11 +32,22 @@ function requireAuth(): array
         || !is_int($sessionUserId)
         || (int) $claims['sub'] !== $sessionUserId
     ) {
-        errorResponse('Your session is invalid or has expired. Please log in again.', 401);
+        return null;
     }
 
     return [
         'id' => $sessionUserId,
         'email' => (string) ($claims['email'] ?? ''),
     ];
+}
+
+function requireAuth(): array
+{
+    $user = currentAuthUser();
+
+    if ($user === null) {
+        errorResponse('Your session is invalid or has expired. Please log in again.', 401);
+    }
+
+    return $user;
 }

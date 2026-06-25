@@ -112,6 +112,7 @@ Open `http://localhost:5500`. Do not open the HTML files directly if you want al
 | POST | `/api/register.php` | Public |
 | POST | `/api/login.php` | Public |
 | POST | `/api/logout.php` | Session cookie |
+| GET | `/api/auth-status.php` | Public status check |
 | GET | `/api/products.php` | Public |
 | POST | `/api/checkout.php` | JWT + PHP session |
 | GET | `/api/orders.php` | JWT + PHP session |
@@ -152,7 +153,7 @@ Example checkout body:
 4. Choose the Docker runtime. Render uses `backend/Dockerfile`.
 5. Add all production environment variables:
    - `APP_ENV=production`
-   - `APP_URL=https://fixerupper-api.onrender.com`
+   - `APP_URL=https://fixerupper-1.onrender.com`
    - `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`
    - `JWT_SECRET` with a cryptographically random value of at least 32 characters
    - `JWT_TTL=3600`
@@ -161,9 +162,9 @@ Example checkout body:
    - `COOKIE_SECURE=true`
    - `COOKIE_SAMESITE=None`
 6. Import `database/fixerupper_db.sql` into a MySQL provider reachable by Render.
-7. Confirm `https://fixerupper-api.onrender.com/` returns a JSON health response.
+7. Confirm `https://fixerupper-1.onrender.com/` returns a JSON health response.
 
-If the Render service has a different hostname, replace `fixerupper-api.onrender.com` in `frontend/vercel.json`.
+If the Render service has a different hostname, replace `fixerupper-1.onrender.com` in `frontend/vercel.json`.
 
 ## Deploy the frontend to Vercel
 

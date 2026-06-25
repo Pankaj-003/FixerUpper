@@ -40,7 +40,12 @@
     }
 
     try {
-      await window.FixerUpper.apiFetch('/api/orders.php?limit=1');
+      const authResponse = await window.FixerUpper.apiFetch('/api/auth-status.php');
+      if (authResponse?.data?.authenticated !== true) {
+        window.location.replace('login.html?return=checkout.html');
+        return;
+      }
+
       const productsResponse = await window.FixerUpper.apiFetch('/api/products.php');
       const products = new Map(productsResponse.data.products.map((product) => [Number(product.id), product]));
 
@@ -69,10 +74,6 @@
 
       content.classList.remove('d-none');
     } catch (error) {
-      if (error.status === 401) {
-        window.location.replace('login.html?return=checkout.html');
-        return;
-      }
       window.FixerUpper.showAlert('checkout-alert', error.message);
     } finally {
       loading.classList.add('d-none');
