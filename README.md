@@ -67,8 +67,8 @@ database/fixerupper_db.sql
 
 ## Default Test Account
 
-**Email:** [test@example.com](mailto:test@example.com)
-**Password:** Test@123
+**Email:** [Demo3@gmail.com](mailto:test@example.com)
+**Password:** Demoo@1234
 
 *(Create this account through registration if not already available.)*
 
